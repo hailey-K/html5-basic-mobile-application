@@ -21,12 +21,12 @@ email: Kkim8301@conestogac.on.ca
 <body>
 
 <!--page 1-->
-<div data-role="page" id="homePage">
+<div data-role="page" id="HKHomePage">
     <header data-role="header"  data-theme="b"  data-position="fixed">
         <h1>HK Feedback A1</h1>
         <div data-role="navbar">
             <ul >
-                <li><a href="#homePage" data-icon="home" class="ui-btn-active ui-state-persist"  data-theme="a" >Home</a></li>
+                <li><a href="#HKHomePage" data-icon="home" class="ui-btn-active ui-state-persist"  data-theme="a" >Home</a></li>
                 <li><a href="#HKAddFeedbackPage" data-icon="plus"  data-theme="a">Add</a></li>
                 <li><a href="#HKViewFeedbackPage" data-icon="grid"  data-theme="a">Reviews</a></li>
                 <li><a href="#HKSettingsPage" data-icon="gear"  data-theme="a">Settings</a></li>
@@ -58,7 +58,7 @@ email: Kkim8301@conestogac.on.ca
         <h1>Add a Feedback</h1>
         <div data-role="navbar">
             <ul >
-                <li><a href="#homePage" data-icon="home" data-theme="a" >Home</a></li>
+                <li><a href="#HKHomePage" data-icon="home" data-theme="a" >Home</a></li>
                 <li><a href="#HKAddFeedbackPage" data-icon="plus"  class="ui-btn-active ui-state-persist" data-theme="a">Add</a></li>
                 <li><a href="#HKViewFeedbackPage" data-icon="grid"  data-theme="a">Reviews</a></li>
                 <li><a href="#HKSettingsPage" data-icon="gear"  data-theme="a">Settings</a></li>
@@ -90,7 +90,7 @@ email: Kkim8301@conestogac.on.ca
         <h1>List of Reviews</h1>
         <div data-role="navbar">
                 <ul >
-                    <li><a href="#homePage" data-icon="home" data-theme="a" >Home</a></li>
+                    <li><a href="#HKHomePage" data-icon="home" data-theme="a" >Home</a></li>
                     <li><a href="#HKAddFeedbackPage" data-icon="plus" data-theme="a">Add</a></li>
                     <li><a href="#HKViewFeedbackPage" data-icon="grid"    class="ui-btn-active ui-state-persist" data-theme="a">Reviews</a></li>
                     <li><a href="#HKSettingsPage" data-icon="gear"  data-theme="a">Settings</a></li>
@@ -100,8 +100,8 @@ email: Kkim8301@conestogac.on.ca
 
     </header>
     <section data-role="content">
-        <ul data-role="listview" style="margin: 10px"  data-inset="true" data-icon="false">
-            <li ><a href="#HKEditFeedbackPage">
+        <ul data-role="listview" style="margin: 10px"  data-inset="true" data-icon="false" id="HKFeedbackList">
+            <li><a href="#HKEditFeedbackPage">
                 <h3>Business Name : Timhorton's</h3>
                 <p>Reviewer Email : Kkim8301@conestogac.on.ca</p>
                 <p>Comments : Good Coffee but always busy</p>
@@ -127,7 +127,7 @@ email: Kkim8301@conestogac.on.ca
         <h1>List of Reviews</h1>
         <div data-role="navbar">
             <ul >
-                <li><a href="#homePage" data-icon="home" data-theme="a" >Home</a></li>
+                <li><a href="#HKHomePage" data-icon="home" data-theme="a" >Home</a></li>
                 <li><a href="#HKAddFeedbackPage" data-icon="plus" data-theme="a">Add</a></li>
                 <li><a href="#HKViewFeedbackPage" data-icon="grid"    class="ui-btn-active ui-state-persist" data-theme="a">Reviews</a></li>
                 <li><a href="#HKSettingsPage" data-icon="gear"  data-theme="a">Settings</a></li>
@@ -137,12 +137,12 @@ email: Kkim8301@conestogac.on.ca
 
     </header>
     <section data-role="content">
-        Business name: <input id="HKBusinessName2" type="text"><br>
-        Reviewer Email: <input id="HKReviewerEmail2" type="text"><br>
+        Business name: <input id="HKBusinessName2" type="text" value="Tim horton's"><br>
+        Reviewer Email: <input id="HKReviewerEmail2" type="text" value="Kkim8301@conestoga.on.ca"><br>
         Reviewer Comments:
-        <textarea id="HKComments2"></textarea><br>
+        <textarea id="HKComments2">Good coffee and cheaper price</textarea><br>
         Overall Ratings (1-100):
-        <input  id="HKRatings2" type="number"><br>
+        <input  id="HKRatings2" type="number"  value="95"><br>
         <div data-role="controlgroup" data-type="horizontal">
             <button  id="HKCancel" type="button" style="background-color:yellow" >Cancel</button>
             <button  id="HKDelete" type="button" data-theme="b" >Delete</button>
@@ -159,16 +159,16 @@ email: Kkim8301@conestogac.on.ca
         <h1>List of Reviews</h1>
         <div data-role="navbar">
             <ul >
-                <li><a href="#homePage" data-icon="home" data-theme="a" >Home</a></li>
+                <li><a href="#HKHomePage" data-icon="home" data-theme="a" >Home</a></li>
                 <li><a href="#HKAddFeedbackPage" data-icon="plus" data-theme="a">Add</a></li>
-                <li><a href="#HKViewFeedbackPage" data-icon="grid"    class="ui-btn-active ui-state-persist" data-theme="a">Reviews</a></li>
-                <li><a href="#HKSettingsPage" data-icon="gear"  data-theme="a">Settings</a></li>
+                <li><a href="#HKViewFeedbackPage" data-icon="grid"  data-theme="a" >Reviews</a></li>
+                <li><a href="#HKSettingsPage" data-icon="gear"  class="ui-btn-active ui-state-persist"data-theme="a">Settings</a></li>
             </ul>
         </div>
     </header>
     <section data-role="content">
       Default reviewer Email :<br>
-        <input>
+        <input id="HKreviewerEmail3">
         <button  id="HKSaveDefaults" type="button" class="ui-btn-active ui-state-persist">Save Defaults</button>
         <button  id="HKClearDatabase" type="button" data-theme="b">Clear Database</button>
     </section>
